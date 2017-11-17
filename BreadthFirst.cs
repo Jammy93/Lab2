@@ -4,7 +4,7 @@ using System.Collections.Generic;
 /*
  * An A* Pathfinder
  */
-public class AStar : Pathfinder {
+public class BreadthFirst : Pathfinder {
 
    private Graph                    graph;
    private PriorityQueue            frontier;
@@ -87,10 +87,10 @@ public class AStar : Pathfinder {
 
    // Straight line distance between nodes
    public static int Distance(Node a, Node b) {
-      double x2 = Math.Pow(a.X - b.X, 2);
-      double y2 = Math.Pow(a.Y - b.Y, 2);
+     // double x2 = Math.Pow(a.X - b.X, 2);
+    //  double y2 = Math.Pow(a.Y - b.Y, 2);
 
-      return (int) Math.Ceiling(Math.Sqrt(x2 + y2));
+      return (0);
    }
 
    // Reconstruct the path start->goal from previous data structure
